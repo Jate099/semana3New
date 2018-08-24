@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#ff2068DC"
+    android:gravity="center_horizontal">
+
+
+    <!-- Aqui van nuestros componentes, asi se comenta -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Introduce tus datos"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="#ffffff"
+        android:id="@+id/tv_titulo"
+        android:textSize="18sp" />
+
+    <!-- ID se usa para referenciar el edit text en java -->
+    <EditText
+        android:id="@+id/et_masa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#1f4a74"
+        android:hint="Masa"
+        android:inputType="numberDecimal"
+        android:padding="10dp"
+        android:textColorHint="#ccc" />
+
+    <EditText
+        android:id= "@+id/et_altura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#1f4a74"
+        android:hint="Altura"
+        android:textColorHint="#ccc"
+        android:padding="10dp" />
+
+    <Button
+        android:id="@+id/btn_calcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Calcular" />
+
+
+</LinearLayout>
