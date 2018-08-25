@@ -13,6 +13,7 @@ import java.text.DecimalFormat;
 public class MainActivity extends AppCompatActivity {
 
     TextView tv_titulo;
+    TextView tv_result;
     EditText et_masa;
     EditText et_altura;
     Button btn_calcular;
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        tv_titulo =  findViewById(R.id.tv_titulo);
+        tv_result =  findViewById(R.id.tv_result);
         et_masa = findViewById(R.id.et_masa);
         et_altura = findViewById(R.id.et_altura);
         btn_calcular = findViewById(R.id.btn_calcular);
@@ -37,12 +38,13 @@ public class MainActivity extends AppCompatActivity {
 
                 imc = masa/Math.pow(altura,2);
 
-                DecimalFormat decimalFormat = new DecimalFormat("#.##");
+                DecimalFormat decimalFormat = new DecimalFormat("#.#");
 
-                tv_titulo.setText("su indice de masa corporal es: "+ decimalFormat.format(imc));
+                tv_result.setText(decimalFormat.format(imc));
 
+                //tv_result.setText("su indice de masa corporal es: "+ decimalFormat.format(imc));
                 //String nombre = et_nombre.getText().toString();
-                Toast.makeText(MainActivity.this, "hola"+imc, Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "Has calculado tu IMC: "+decimalFormat.format(imc), Toast.LENGTH_LONG).show();
             }
         });
     }
